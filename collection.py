@@ -10,8 +10,8 @@ def store():
         print("Welcome to the shop, is there anything you want?\n")
         print("Press 1 for Corn\n")
         print("Press 2 for Apple\n")
-        print("Press 3 for Chicken\n")
-        print("Press")
+        print("Press 3 for Snake\n")
+        print("Press 4 for Chicken\n")
         print("Press q to stop\n")
 
         choice = input()
@@ -21,6 +21,8 @@ def store():
         
         if choice == 'q':
             tim.display_inventory()
+            tim.sort_inventory_alpha()
+            tim.sort_inventory_hp()
             sys.exit()
         
         addItems(choice)
