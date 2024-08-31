@@ -1,18 +1,11 @@
+from item import Item
 
-
-class Food:
+#food class
+class Food(Item):
     
     def __init__(self, name, bPrice, sPrice, hp):
-        self.name = name
-        self.bPrice = bPrice
-        self.sPrice = sPrice 
+        super().__init__(name, bPrice, sPrice)
         self.hp = hp
-
-    def get_name(self):
-        return self.__name 
-    
-    def set_name(self, name):
-        self.__name = name
 
     def display_info(self):
         print(f"Name: {self.name}, Buy Price: {self.bPrice}, Sell Price: {self.sPrice}, Health Points: {self.hp}")
